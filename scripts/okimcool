@@ -1,17 +1,17 @@
 -- Thx to https://github.com/XVCHub for the method and songs >.<
 
-if not isfile("okimcool.mp3") then
-    writefile("okimcool.mp3", game:HttpGet("https://github.com/s-0-u-l-z/comet/raw/refs/heads/main/sounds/Stars_StarsSource_okimcool.mp3"))
+if not isfile("Stars_StarsSource_okimcool.mp3") then
+    writefile("Stars_StarsSource_okimcool.mp3", game:HttpGet("https://github.com/s-0-u-l-z/comet/raw/refs/heads/main/sounds/Stars_StarsSource_okimcool.mp3"))
 end
 
-local phonk2 = Instance.new("Sound", game:GetService("SoundService"))
-phonk2.SoundId = getcustomasset("okimcool.mp3")
-phonk2.Volume = getgenv().volume or 1
-phonk2.Looped = getgenv().loop == true
+local Stars_StarsSource_okimcool = Instance.new("Sound", game:GetService("SoundService"))
+Stars_StarsSource_okimcool.SoundId = getcustomasset("Stars_StarsSource_okimcool.mp3")
+Stars_StarsSource_okimcool.Volume = getgenv().volume or 1
+Stars_StarsSource_okimcool.Looped = getgenv().loop == true
 
-phonk2:Play()
-if not phonk2.Looped then
-    phonk2.Ended:Connect(function()
-        phonk2:Destroy()
+Stars_StarsSource_okimcool:Play()
+if not Stars_StarsSource_okimcool.Looped then
+    Stars_StarsSource_okimcool.Ended:Connect(function()
+        Stars_StarsSource_okimcool:Destroy()
     end)
 end

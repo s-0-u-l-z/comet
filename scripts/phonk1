@@ -1,17 +1,17 @@
 -- Thx to https://github.com/XVCHub for the method and songs >.<
 
-if not isfile("comet_phonk1.mp3") then
-    writefile("comet_phonk1.mp3", game:HttpGet("https://github.com/s-0-u-l-z/comet/raw/refs/heads/main/sounds/phonk1.mp3"))
+if not isfile("phonk1.mp3") then
+    writefile("phonk1.mp3", game:HttpGet("https://github.com/s-0-u-l-z/comet/raw/refs/heads/main/sounds/phonk1.mp3"))
 end
 
-local phonk2 = Instance.new("Sound", game:GetService("SoundService"))
-phonk2.SoundId = getcustomasset("comet_phonk1.mp3")
-phonk2.Volume = getgenv().volume or 1
-phonk2.Looped = getgenv().loop == true
+local phonk1 = Instance.new("Sound", game:GetService("SoundService"))
+phonk1.SoundId = getcustomasset("phonk1.mp3")
+phonk1.Volume = getgenv().volume or 1
+phonk1.Looped = getgenv().loop == true
 
-phonk2:Play()
-if not phonk2.Looped then
-    phonk2.Ended:Connect(function()
-        phonk2:Destroy()
+phonk1:Play()
+if not phonk1.Looped then
+    phonk1.Ended:Connect(function()
+        phonk1:Destroy()
     end)
 end

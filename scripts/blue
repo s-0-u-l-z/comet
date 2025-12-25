@@ -4,14 +4,14 @@ if not isfile("blue.mp3") then
     writefile("blue.mp3", game:HttpGet("https://github.com/s-0-u-l-z/comet/raw/refs/heads/main/sounds/blue.mp3"))
 end
 
-local phonk2 = Instance.new("Sound", game:GetService("SoundService"))
-phonk2.SoundId = getcustomasset("blue.mp3")
-phonk2.Volume = getgenv().volume or 1
-phonk2.Looped = getgenv().loop == true
+local blue = Instance.new("Sound", game:GetService("SoundService"))
+blue.SoundId = getcustomasset("blue.mp3")
+blue.Volume = getgenv().volume or 1
+blue.Looped = getgenv().loop == true
 
-phonk2:Play()
-if not phonk2.Looped then
-    phonk2.Ended:Connect(function()
-        phonk2:Destroy()
+blue:Play()
+if not blue.Looped then
+    blue.Ended:Connect(function()
+        blue:Destroy()
     end)
 end

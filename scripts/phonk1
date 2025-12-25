@@ -1,7 +1,7 @@
 -- Thx to https://github.com/XVCHub for the method and songs >.<
 
 if not isfile("comet_phonk1.mp3") then
-    writefile("comet_phonk1.mp3", game:HttpGet("url"))
+    writefile("comet_phonk1.mp3", game:HttpGet("https://github.com/s-0-u-l-z/comet/raw/refs/heads/main/sounds/phonk1.mp3"))
 end
 
 local phonk2 = Instance.new("Sound", game:GetService("SoundService"))

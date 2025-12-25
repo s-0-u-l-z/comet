@@ -2,14 +2,14 @@ if not isfile("Until_I_Found_You.mp3") then
     writefile("Until_I_Found_You.mp3", game:HttpGet("https://github.com/s-0-u-l-z/comet/raw/refs/heads/main/sounds/Until%20I%20Found%20You.mp3"))
 end
 
-local Star2 = Instance.new("Sound", game:GetService("SoundService"))
-Star2.SoundId = getcustomasset("Until_I_Found_You.mp3")
-Star2.Volume = getgenv().volume or 1
-Star2.Looped = getgenv().loop == true
-Star2:Play()
+local until_i_found_you = Instance.new("Sound", game:GetService("SoundService"))
+until_i_found_you.SoundId = getcustomasset("Until_I_Found_You.mp3")
+until_i_found_you.Volume = getgenv().volume or 1
+until_i_found_you.Looped = getgenv().loop == true
+until_i_found_you:Play()
 
-if not Star2.Looped then
-    Star2.Ended:Connect(function()
-        Star2:Destroy()
+if not until_i_found_you.Looped then
+    until_i_found_you.Ended:Connect(function()
+        until_i_found_you:Destroy()
     end)
 end
